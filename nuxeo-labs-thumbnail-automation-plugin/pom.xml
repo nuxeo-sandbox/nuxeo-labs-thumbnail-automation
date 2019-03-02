@@ -5,7 +5,7 @@
   <parent>
     <groupId>nuxeo-labs-thumbnail-automation</groupId>
     <artifactId>nuxeo-labs-thumbnail-automation-parent</artifactId>
-    <version>9.10-SNAPSHOT</version>
+    <version>10.10-SNAPSHOT</version>
   </parent>
   <groupId>nuxeo-labs-thumbnail-automation</groupId>
   <artifactId>nuxeo-labs-thumbnail-automation-plugin</artifactId>

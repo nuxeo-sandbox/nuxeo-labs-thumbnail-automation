@@ -5,12 +5,12 @@
   <parent>
     <groupId>org.nuxeo.ecm.distribution</groupId>
     <artifactId>nuxeo-distribution</artifactId>
-    <version>9.10</version>
+    <version>10.10</version>
   </parent>
   <groupId>nuxeo-labs-thumbnail-automation</groupId>
   <artifactId>nuxeo-labs-thumbnail-automation-parent</artifactId>
   <name>Parent Project for Nuxeo Labs Thumbnail Automation</name>
-  <version>9.10-SNAPSHOT</version>
+  <version>10.10-SNAPSHOT</version>
   <packaging>pom</packaging>
   <description />
   <modules>

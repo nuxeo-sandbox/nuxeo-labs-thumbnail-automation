@@ -21,7 +21,7 @@ Basically:
 
 ### 2. Override one (or more) of the default ThumbnailFactory
 
-This is done by telling the ThumbnailServoce to use the specific factory class of this plugin, available at `nuxeo.labs.thumbnail.automation.ThumbnailAutomationFactory`.
+This is done by telling the ThumbnailService to use the specific factory class of this plugin, available at `nuxeo.labs.thumbnail.automation.ThumbnailAutomationFactory`.
 
 Here, we override the Picture thumbnail factory:
 
