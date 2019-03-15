@@ -1,5 +1,8 @@
 # nuxeo-labs-thumbnail-automation
 
+QA status<br/>
+[![Build Status](https://qa.nuxeo.org/jenkins/buildStatus/icon?job=Sandbox/sandbox_nuxeo-labs-thumbnail-automation-master)](https://qa.nuxeo.org/jenkins/view/Sandbox/job/Sandbox/job/sandbox_nuxeo-labs-thumbnail-automation-master/)
+
 The plug-in allows for calculating a thumbnail using automation.
 
 Basically:
