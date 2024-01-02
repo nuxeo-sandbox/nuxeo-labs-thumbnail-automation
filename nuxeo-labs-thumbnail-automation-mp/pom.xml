@@ -3,7 +3,7 @@
   <parent>
     <groupId>nuxeo-labs-thumbnail-automation</groupId>
     <artifactId>nuxeo-labs-thumbnail-automation-parent</artifactId>
-    <version>2021.25-SNAPSHOT</version>
+    <version>2023.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>nuxeo-labs-thumbnail-automation-mp</artifactId>
   <packaging>zip</packaging>

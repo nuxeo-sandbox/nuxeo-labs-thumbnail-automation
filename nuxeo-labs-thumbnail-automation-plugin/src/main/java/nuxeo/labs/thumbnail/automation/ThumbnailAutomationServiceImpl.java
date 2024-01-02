@@ -19,8 +19,8 @@
 package nuxeo.labs.thumbnail.automation;
 
 import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.nuxeo.ecm.automation.AutomationService;
 import org.nuxeo.ecm.automation.OperationChain;
 import org.nuxeo.ecm.automation.OperationContext;
@@ -43,9 +43,14 @@ import org.nuxeo.runtime.model.DefaultComponent;
  */
 public class ThumbnailAutomationServiceImpl extends DefaultComponent implements ThumbnailAutomationService {
 
-    private static final Log log = LogFactory.getLog(ThumbnailAutomationServiceImpl.class);
+    protected static final Logger log = LogManager.getLogger(ThumbnailAutomationServiceImpl.class);
 
     public static final String CONFIG_EXT_POINT = "configuration";
+    
+    // Avoid being flooded by the log if the service is not correctly configured
+    protected static boolean noConfigLogged = false;
+    
+    protected static boolean noChainLogged = false;
 
     protected ThumbnailAutomationDescriptor config = null;
 
@@ -79,7 +84,8 @@ public class ThumbnailAutomationServiceImpl extends DefaultComponent implements 
      * @throws Exception
      */
     @Override
-    public void applicationStarted(ComponentContext context) {
+    public void start(ComponentContext context) {
+        super.start(context);
     }
 
     @Override
@@ -106,13 +112,19 @@ public class ThumbnailAutomationServiceImpl extends DefaultComponent implements 
     public Blob getThumbnail(DocumentModel doc, CoreSession session) {
         
         if(config == null) {
-            log.error("No configuration: Returning default thumbnail");
+            if(!noConfigLogged) {
+                log.error("No configuration: Returning default thumbnail");
+                noConfigLogged = true;
+            }
             return getDefaultThumbnail(doc, session);
         }
 
         String chainId = config.getChainId();
         if(StringUtils.isBlank(chainId)) {
-            log.error("No chainID passed to the service: Returning default thumbnail");
+            if(!noChainLogged) {
+                log.error("No chainID passed to the service: Returning default thumbnail");
+                noChainLogged = true;
+            }
             return getDefaultThumbnail(doc, session);
         }
 

@@ -5,18 +5,18 @@
   <parent>
     <groupId>org.nuxeo</groupId>
     <artifactId>nuxeo-parent</artifactId>
-    <version>2021.25</version>
+    <version>2023.5</version>
   </parent>
   <groupId>nuxeo-labs-thumbnail-automation</groupId>
   <artifactId>nuxeo-labs-thumbnail-automation-parent</artifactId>
   <name>Parent Project for Nuxeo Labs Thumbnail Automation</name>
-  <version>2021.25-SNAPSHOT</version>
+  <version>2023.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <description />
   <properties>
     <!-- Skip Nuxeo enforcer rules by default -->
     <nuxeo.skip.enforcer>true</nuxeo.skip.enforcer>
-    <nuxeo.target.version>2021.*</nuxeo.target.version>
+    <nuxeo.target.version>2023.*</nuxeo.target.version>
   </properties>
   <modules>
     <module>nuxeo-labs-thumbnail-automation-plugin</module>
@@ -82,4 +82,16 @@
       </snapshots>
     </pluginRepository>
   </pluginRepositories>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>3.3.1</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
 </project>

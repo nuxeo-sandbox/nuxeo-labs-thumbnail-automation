@@ -7,13 +7,13 @@
   </service>
 
   <extension-point name="configuration">
-    <documentation>Configure the service: ID of the Autmation Chian to use</documentation>
+    <documentation>Configure the service: ID of the Automation Chain to use</documentation>
     <object class="nuxeo.labs.thumbnail.automation.ThumbnailAutomationDescriptor" />
   </extension-point>
-  <!--
+  <!-- Example:
   <extension target="nuxeo.labs.thumbnail.automation" point="configuration">
     <configuration>
-      <chainId>yourchain</chainId>
+      <chainId>javascript.myChainForThumbnails</chainId>
     </configuration>
   </extension>
   -->
